@@ -461,7 +461,7 @@ app.use("/uploads", express.static(UPLOAD_DIR, {
 }));
 
 app.get("/", (req, res) => {
-  const htmlPath = path.join(__dirname, "p_catch.html");
+  const htmlPath = path.join(__dirname, "index.html");
   if (fs.existsSync(htmlPath)) {
     res.set("Cache-Control", "no-cache");
     return res.sendFile(htmlPath);
